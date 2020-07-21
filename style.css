@@ -1,0 +1,64 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Digital, sans-serif;
+    font-weight: normal;
+}
+html {
+    height: 100%;
+    background: url(https://images.unsplash.com/photo-1533628635777-112b2239b1c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+    background-size: cover;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to-right, #00AAFF, #00FF6C);
+}
+.calculatorGrid{
+    border-radius: 3px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.2);
+}
+.calculatorGrid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #fff;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculatorGrid > button:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.outputScreen {
+    grid-column: 1 / -1;
+    background-color: rgba(218, 212, 212, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.2);
+}
+
+.outputScreen .previousOperand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.outputScreen .currentOperand {
+    color: #fff;
+    font-size: 2.5rem;
+}
